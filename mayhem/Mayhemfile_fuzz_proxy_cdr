@@ -1,0 +1,11 @@
+project: savantenvs/fast-dds
+target: fuzz_proxy_cdr
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_proxy_cdr/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_proxy_cdr
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/mayhem/fuzz_proxy_cdr/fuzz_proxy_cdr.dict
+
