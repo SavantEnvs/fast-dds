@@ -1,0 +1,10 @@
+project: savantenvs/fast-dds
+target: fuzz_XMLProfiles
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_XMLProfiles/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_XMLProfiles
+    libfuzzer: true
+    timeout: 10
+
