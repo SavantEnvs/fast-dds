@@ -1,0 +1,10 @@
+project: savantenvs/fast-dds
+target: fuzz_processDataFrag-mined-26ec83a
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_processDataFrag-mined-26ec83a/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_processDataFrag
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/mayhem/fuzz_processDataFrag-mined-26ec83a/fuzz_processDataFrag.dict
